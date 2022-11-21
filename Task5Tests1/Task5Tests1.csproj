@@ -18,8 +18,4 @@
     <ProjectReference Include="..\Task5\Task5.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="ModuleTests\" />
-  </ItemGroup>
-
 </Project>
