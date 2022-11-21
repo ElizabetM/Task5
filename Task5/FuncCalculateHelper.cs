@@ -10,6 +10,9 @@ namespace Task5
     {
         public double Fact(double value)
         {
+            if (value < 0 || IsNaN(value))
+                return double.NaN;
+
             if ((int)value < 2)
                 return 1;
 
