@@ -14,47 +14,10 @@ namespace Task5.Tests
         [TestMethod()]
         public void FactTest()
         {
-            Assert.IsTrue(true);
-        }
-
-        [TestMethod()]
-        public void DevisionTo100Test()
-        {
-            Assert.IsTrue(true);
-
-        }
-
-        [TestMethod()]
-        public void LnTest()
-        {
-            Assert.IsTrue(true);
-
-        }
-
-        [TestMethod()]
-        public void DoubleLnTest()
-        {
-            Assert.IsTrue(true);
-
-        }
-
-        [TestMethod()]
-        public void ExponentaTest()
-        {
-            Assert.IsTrue(true);
-
-        }
-
-        [TestMethod()]
-        public void MultipleTest()
-        {
-            Assert.IsTrue(true);
-        }
-
-        [TestMethod()]
-        public void CalculateYTest()
-        {
-            Assert.IsTrue(true);
+            var helper = new FuncCalculateHelper();
+            double x = 100;
+            double res = helper.Fact(x);
+            Assert.IsTrue(helper.CalculateY(x) == res);
         }
     }
 }
