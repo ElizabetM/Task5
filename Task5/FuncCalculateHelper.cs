@@ -26,7 +26,12 @@ namespace Task5
 
         //логариф по основанию e
         public double Ln(double value)
-            => Math.Log(value);
+        {
+            if (double.IsInfinity(value) || double.IsNaN(value))
+                return double.NaN;
+
+            return Math.Log(value);
+        }
 
         public double DoubleLn(double value)
             => value * 2.0;
