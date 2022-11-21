@@ -17,25 +17,15 @@ namespace Task5
         }
 
         public double DevisionTo100(double value)
-        {
-            if (double.IsInfinity(value) || double.IsNaN(value))
-                return double.NaN;
-
-            return value / 100.0;
-        }
+            => IsNaN(value) ? double.NaN : value / 100.0;
 
         //логариф по основанию e
         public double Ln(double value)
-        {
-            if (double.IsInfinity(value) || double.IsNaN(value))
-                return double.NaN;
-
-            return Math.Log(value);
-        }
+            => IsNaN(value) ? double.NaN : Math.Log(value);
 
         public double DoubleLn(double value)
-            => value * 2.0;
-
+            => IsNaN(value) ? double.NaN : value * 2.0;
+        
         public double Exponenta(double value)
             => Math.Exp(value);
 
@@ -44,5 +34,8 @@ namespace Task5
 
         public double CalculateY(double x)
             => Multiple(Fact(x), Exponenta(DoubleLn(Ln(DevisionTo100(x)))));
+
+        private bool IsNaN(double value)
+            => double.IsInfinity(value) || double.IsNaN(value);
     }
 }
